@@ -9,6 +9,7 @@ public class Vehiculo {
 	private int peso;
 	private String traccion;
 	private Fabricante fabricante;
+	static int cantidadVehiculos;
 	static int cantidadCamiones;
 	static int cantidadCamionetas;
 	static int cantidadAutomoviles;
@@ -22,6 +23,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
+		Vehiculo.cantidadVehiculos++;
 		if (Fabricante.vehiculosXFabricante.containsKey(fabricante)) {
 			int n = Fabricante.vehiculosXFabricante.get(fabricante);
 			Fabricante.vehiculosXFabricante.replace(fabricante, n+1);
@@ -95,7 +97,11 @@ public class Vehiculo {
 	}
 	
 	public static int getCantidadVehiculos() {
-		return Vehiculo.cantidadCamiones + Vehiculo.cantidadCamionetas + Vehiculo.cantidadAutomoviles;
+		return Vehiculo.cantidadVehiculos;
+	}
+	
+	public static int setCantidadVehiculos(int cantidadVehiculos) {
+		return Vehiculo.cantidadVehiculos = cantidadVehiculos;
 	}
 	
 	public static String vehiculosPorTipo() {
