@@ -25,7 +25,7 @@ class Fabricante {
 		return this.pais;
 	}
 	
-	public void setPaís(Pais pais) {
+	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
 	
