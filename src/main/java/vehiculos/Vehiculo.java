@@ -1,6 +1,6 @@
 package vehiculos;
 
-class Vehiculo {
+public class Vehiculo {
 	private String placa;
 	private int puertas;
 	private int velocidadMaxima;

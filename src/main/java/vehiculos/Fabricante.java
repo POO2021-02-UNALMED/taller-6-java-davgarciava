@@ -3,7 +3,7 @@ package vehiculos;
 import java.util.Hashtable;
 import java.util.Map.Entry;
 
-class Fabricante {
+public class Fabricante {
 	private String nombre;
 	private Pais pais;
 	static Hashtable<Fabricante, Integer> vehiculosXFabricante = new Hashtable<Fabricante, Integer>();
